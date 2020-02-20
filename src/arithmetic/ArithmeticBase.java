@@ -16,12 +16,16 @@ import java.util.Scanner;
 public class ArithmeticBase 
 {
  public double x,y;
+ private enum OPERATION { PLUS, MINUS, TIMES, DIVIDE};
+ private String OPERATION;
+ private String Daunte;
+
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
         System.out.println("enter String");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        OPERATION= sc.next();
+        switch (OPERATION) 
         {
             case "PLUS":
                 return x + y;
